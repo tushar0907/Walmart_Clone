@@ -8,6 +8,7 @@ import Department from '../components/shop_departments';
 import Grocery from '../components/grocery_section';
 import Category from '../components/categories';
 import Footer from '../components/footer';
+import Slider from '../components/tools/slider';
 
 
 const Home=() => {
@@ -22,6 +23,7 @@ const Home=() => {
                   <Grocery />
                   <Category />
                   <Footer />
+
             </div>
       );
 }

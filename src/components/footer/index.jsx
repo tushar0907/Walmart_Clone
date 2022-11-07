@@ -6,6 +6,15 @@ import {BsTwitter} from "react-icons/bs";
 import {BiChevronRight} from "react-icons/bi";
 
 const Footer=() => {
+      const [data, setData]=React.useState({
+            email: ""
+      })
+
+      const handleInput=(e) => {
+            console.log(e.target.name, e.target.value);
+            setData({[e.target.name]: e.target.value})
+      }
+
       return (
             <div className='flex flex-col'>
                   {footer.map(item => (
@@ -15,7 +24,7 @@ const Footer=() => {
                                     </div>
                                     <div className="flex p-3 text-sm w-11/12">{item.firstQuote}</div>
                                     <div className="flex p-3">
-                                          <input className='border border-gray-400 rounded-lg p-3 w-3/4 bg-white text-black' type="email" name="email" placeholder="Enter Email Address" />
+                                          <input className='border border-gray-400 rounded-lg p-3 w-3/4 bg-white text-black' type="email" name="email" onChange={handleInput} placeholder="Enter Email Address" />
                                     </div>
                                     <div className="flex p-3">
                                           <button className='bg-orange-600 w-3/5 h-12 rounded-lg text-white font-bold'>
