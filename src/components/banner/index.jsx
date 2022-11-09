@@ -1,9 +1,6 @@
 import React from 'react';
 import Slider from "react-slick";
 
-
-
-
 const Banner=() => {
 
       let settings={
